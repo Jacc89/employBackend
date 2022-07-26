@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Core.Models;
+using Infraestructura.Data.Config;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infraestructura.Data
@@ -11,6 +12,13 @@ namespace Infraestructura.Data
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {          
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new CompaniaConfiguration());
+            modelBuilder.ApplyConfiguration(new EmpleadoConfiguration());
+
         }
 
         public DbSet<Compania> TbCompania { get; set; }
