@@ -2065,11 +2065,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\API\\API.csproj",
+      "projectPath": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\API\\API.csproj",
       "packagesPath": "C:\\Users\\JACC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\API\\obj\\",
+      "outputPath": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JACC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2086,11 +2086,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Core\\Core.csproj"
+            "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Core\\Core.csproj"
             },
-            "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Infraestructura\\Infraestructura.csproj": {
-              "projectPath": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Infraestructura\\Infraestructura.csproj"
+            "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Infraestructura\\Infraestructura.csproj": {
+              "projectPath": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Infraestructura\\Infraestructura.csproj"
             }
           }
         }

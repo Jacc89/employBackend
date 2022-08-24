@@ -42,6 +42,16 @@ namespace API.Controllers
         }
         [HttpPost]
         public async Task<ActionResult<Compania>> PostCompania([FromBody] Compania compania){
+            
+            
+            if(compania ==null){
+                _response.Mensaje ="";
+            }
+            
+            
+            
+            
+            
             await _db.TbCompania.AddAsync( compania);
             await _db.SaveChangesAsync();
             return CreatedAtRoute("GetCompania", new{id = compania.Id}, compania); // status code = 201

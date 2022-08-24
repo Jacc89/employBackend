@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gCPjHFsHMfECArqD9QKaPRSift6WRVIP70o/YjROnv1JH8zSuGv+9+jhex2KxnBj/TQR+5fmCknuP5lFiKWFqg==",
+  "dgSpecHash": "89jVpZQiDpJCYof1iDZtaW+9DIOxj8B+RuktYLaJi3Lgw+c718f8/qowrvHbvYLTK3sXh4vyU+rn2v7WjPwQ/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Infraestructura\\Infraestructura.csproj",
+  "projectFilePath": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Infraestructura\\Infraestructura.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JACC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\JACC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

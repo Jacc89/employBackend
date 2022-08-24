@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Core\\Core.csproj": {}
+    "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Core\\Core.csproj": {
+    "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\JACC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Core\\obj\\",
+        "outputPath": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JACC\\AppData\\Roaming\\NuGet\\NuGet.Config",
