@@ -1848,11 +1848,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Infraestructura\\Infraestructura.csproj",
+      "projectUniqueName": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Infraestructura\\Infraestructura.csproj",
       "projectName": "Infraestructura",
-      "projectPath": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Infraestructura\\Infraestructura.csproj",
+      "projectPath": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Infraestructura\\Infraestructura.csproj",
       "packagesPath": "C:\\Users\\JACC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Infraestructura\\obj\\",
+      "outputPath": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Infraestructura\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JACC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1869,8 +1869,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\JACC\\Programacion\\Bootcamp\\Ejercicios\\app-empleados\\employBackend\\Core\\Core.csproj"
+            "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\JACC\\Documents\\Proyecto Programacion\\`Bootcamp\\Employ\\employBackend\\Core\\Core.csproj"
             }
           }
         }
