@@ -32,9 +32,9 @@ namespace Infraestructura.Data.Repositorio
             }
             if (incluirPropiedades != null) // compANI, CARGO, DEPARTM
             {
-                foreach (var item in incluirPropiedades.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                foreach (var ip in incluirPropiedades.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
                 {
-                     query = query.Include(item);
+                     query = query.Include(ip);
                     
                 }
             }

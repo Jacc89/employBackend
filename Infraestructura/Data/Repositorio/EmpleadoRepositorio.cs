@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Core.Models;
 using Infraestructura.Data.Repositorio.IRepositorio;
 
@@ -23,7 +19,14 @@ namespace Infraestructura.Data.Repositorio
                 empleadoDB.Apellidos = empleado.Apellidos;
                 empleadoDB.Nombres = empleado.Nombres;
                 empleadoDB.Cargo = empleado.Cargo;
+                empleadoDB.CompaniaId = empleado.CompaniaId;
+                _db.SaveChanges();
             }
+        }
+
+        public void Remover(Empleado empleado)
+        {
+            throw new NotImplementedException();
         }
     }
 }

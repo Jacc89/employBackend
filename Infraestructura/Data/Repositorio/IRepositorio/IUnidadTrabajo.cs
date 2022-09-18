@@ -1,7 +1,8 @@
+using Infraestructura.Data.Repositorio;
 using Infraestructura.Data.Repositorio.IRepositorio;
-namespace Infraestructura.Data.Repositorio.IRepositorio
+namespace Infraestructura.Data.IRepositorio
 {
-    public class IUnidadTrabajo : IDisposable
+    public interface IUnidadTrabajo : IDisposable
     {
         ICompaniaRepositorio Compania {get;}
         IEmpleadoRepositorio Empleado {get; }
