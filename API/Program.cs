@@ -17,6 +17,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(ConnectionString));
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.AddTransient<IUnidadeTrabajo, UnidadTrabajo>
 
 builder.Services.AddCors();
 
