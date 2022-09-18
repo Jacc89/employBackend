@@ -20,6 +20,7 @@ namespace Infraestructura.Data.Repositorio
                 companiaDB.Dirreccion = compania.Dirreccion;
                 companiaDB.Telefono = compania.Telefono;
                 companiaDB.Telefono2 = compania.Telefono2;
+                _db.SaveChanges();
             }
         }
     }

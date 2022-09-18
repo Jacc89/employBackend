@@ -6,8 +6,9 @@ using Core.Models;
 
 namespace Infraestructura.Data.Repositorio.IRepositorio
 {
-    public class IEmpleadoRepositorio : IRepositorio<Empleado>
+    public interface IEmpleadoRepositorio : IRepositorio<Empleado>
     {
-        
+        void Actualizar(Empleado empleado);
+        void Remover(Empleado empleado);
     }
 }
