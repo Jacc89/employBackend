@@ -1,4 +1,3 @@
-using Infraestructura.Data.Repositorio;
 using Infraestructura.Data.Repositorio.IRepositorio;
 namespace Infraestructura.Data.IRepositorio
 {

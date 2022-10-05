@@ -168,7 +168,7 @@ namespace API.Controllers
             {
                 return NotFound();
             }
-            _unidadTrabajo.Empleado.Remover(empleado);
+            _unidadTrabajo.Empleado.Remove(empleado);
             await _unidadTrabajo.Guardar();
             return NoContent();
         }

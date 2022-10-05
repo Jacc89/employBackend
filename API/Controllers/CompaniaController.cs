@@ -1,13 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Core.Models;
 using Core.Dto;
-using Infraestructura.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using Infraestructura.Data.IRepositorio;
 
 namespace API.Controllers
 {
@@ -16,17 +11,19 @@ namespace API.Controllers
     public class CompaniaController : ControllerBase
     {
       
-        private readonly ApplicationDbContext _db;
+        
         private ResponseDto _response;
         private readonly ILogger<CompaniaController> _logger;
         private readonly IMapper _mapper;
+        private readonly IUnidadTrabajo _unidadTrabajo;
 
-        public CompaniaController(ApplicationDbContext db, ILogger<CompaniaController> logger,
+        public CompaniaController(IUnidadTrabajo unidadTrabajo, ILogger<CompaniaController> logger,
                                                         IMapper mapper)
         {
+            _unidadTrabajo = unidadTrabajo;
             _mapper = mapper;
             _logger = logger;
-            _db = db;
+            
             _response = new ResponseDto();
         }
         // get 
@@ -35,7 +32,7 @@ namespace API.Controllers
         public async Task<ActionResult<IEnumerable<Compania>>> GetCompanias()
         {
             _logger.LogInformation("Listado de companias get companias");
-           var listas = await _db.TbCompania.ToListAsync();
+           var listas = await _unidadTrabajo.Compania.ObtenerTodos();
            _response.Resultado = listas;
            _response.Mensaje =" Listado de Clientes";
            return Ok(_response);
@@ -54,7 +51,7 @@ namespace API.Controllers
                 return BadRequest(_response);
             }
 
-            var comp = await _db.TbCompania.FindAsync(id);
+            var comp = await _unidadTrabajo.Compania.ObtenerPrimero(c =>c.Id == id);
 
             if(comp == null){
                  _logger.LogError("LA compañia no existe get compania.");
@@ -83,8 +80,7 @@ namespace API.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var companiaExiste = await _db.TbCompania.FirstOrDefaultAsync
-                                (c  => c.NombreCompania.ToLower() ==  companiaDto.NombreCompania.ToLower());
+            var companiaExiste = await _unidadTrabajo.Compania.ObtenerPrimero(c  => c.NombreCompania.ToLower() ==  companiaDto.NombreCompania.ToLower());
             if (companiaExiste != null)
             {
                 ModelState.AddModelError("NombreDiplicado", "Nombre de la compánia ya existe");
@@ -93,8 +89,8 @@ namespace API.Controllers
 
             Compania compania  = _mapper.Map<Compania>(companiaDto);
 
-            await _db.TbCompania.AddAsync( compania);                                   
-            await _db.SaveChangesAsync();
+            await _unidadTrabajo.Compania.Agregar(compania);                                  
+            await _unidadTrabajo.Guardar();
             return CreatedAtRoute("GetCompania", new{id = compania.Id}, compania); // status code = 201
         }
 
@@ -112,7 +108,7 @@ namespace API.Controllers
                 
             }
 
-            var companiaExiste = await _db.TbCompania.FirstOrDefaultAsync(c => c.NombreCompania == companiaDto.NombreCompania && c.Id != companiaDto.Id);
+            var companiaExiste = await _unidadTrabajo.Compania.ObtenerPrimero(c => c.NombreCompania == companiaDto.NombreCompania && c.Id != companiaDto.Id);
 
             if(companiaExiste! == null)
             {
@@ -123,8 +119,8 @@ namespace API.Controllers
 
             Compania compania  = _mapper.Map<Compania>(companiaDto);
 
-            _db.Update(compania);
-            await _db.SaveChangesAsync();
+            _unidadTrabajo.Compania.Actualizar(compania);
+            await _unidadTrabajo.Guardar();
             return Ok(compania);
 
         }
@@ -134,12 +130,12 @@ namespace API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult> DeleteCompania(int id){
-            var compania = await _db.TbCompania.FindAsync(id);
+            var compania = await _unidadTrabajo.Compania.ObtenerPrimero(c=>c.Id == id);
             if(compania == null){
                 return NotFound();
             }
-            _db.TbCompania.Remove(compania);
-            await _db.SaveChangesAsync();
+           _unidadTrabajo.Compania.Remove(compania);
+            await _unidadTrabajo.Guardar();
             return NoContent();
         }
         

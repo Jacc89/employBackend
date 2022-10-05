@@ -1,8 +1,7 @@
-using System.Globalization;
 using API.Helpers;
 using Infraestructura.Data;
 using Infraestructura.Data.IRepositorio;
-using Infraestructura.Data.Repositorio.IRepositorio;
+using Infraestructura.Data.Repositorio;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

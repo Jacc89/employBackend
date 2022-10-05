@@ -14,7 +14,7 @@ namespace Infraestructura.Data.Repositorio.IRepositorio
             string incluirPropiedades = null 
         );
 
-        Task Agregar(T entidad);
-        void Remove(T entidad);
+        Task Agregar(T models);
+        void Remove(T models);
     }
 }

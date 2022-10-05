@@ -23,10 +23,5 @@ namespace Infraestructura.Data.Repositorio
                 _db.SaveChanges();
             }
         }
-
-        public void Remover(Empleado empleado)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

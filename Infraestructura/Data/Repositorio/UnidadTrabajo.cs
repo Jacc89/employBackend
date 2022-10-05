@@ -1,11 +1,12 @@
 using Infraestructura.Data.IRepositorio;
 using Infraestructura.Data.Repositorio.IRepositorio;
 
-namespace Infraestructura.Data.Repositorio.IRepositorio
+namespace Infraestructura.Data.Repositorio
 {
     public class UnidadTrabajo : IUnidadTrabajo
-    {      
-        private readonly ApplicationDbContext _db;
+
+    {
+       private readonly ApplicationDbContext _db;
         public ICompaniaRepositorio Compania {get; private set;}
         public IEmpleadoRepositorio Empleado {get; private set;}
 
@@ -15,7 +16,7 @@ namespace Infraestructura.Data.Repositorio.IRepositorio
             Compania = new CompaniaRepositorio(db);
             Empleado = new EmpleadoRepositorio(db);
         }
-
+      
         public void Dispose()
         {
             _db.Dispose();
@@ -23,7 +24,7 @@ namespace Infraestructura.Data.Repositorio.IRepositorio
 
         public async Task Guardar()
         {
-            await _db.SaveChangesAsync();
+           await _db.SaveChangesAsync();
         }
     }
 }
