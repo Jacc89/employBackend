@@ -31,13 +31,13 @@ namespace API.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<EmpleadoReadDto>>> GetEmpleados()
+        public async Task<ActionResult<IEnumerable<Empleado>>> GetEmpleados()
         {
             _logger.LogInformation("Listado de Empleados");
             var lista = await _unidadTrabajo.Empleado.ObtenerTodos(incluirPropiedades: "Compania");
 
             _response.Resultado = _mapper.Map<IEnumerable<Empleado>, IEnumerable<EmpleadoReadDto>>(lista);
-
+            // _response.Resultado= StatusCode.Ok;
             _response.Mensaje = "Listado de Empleados";
 
             return Ok(_response);

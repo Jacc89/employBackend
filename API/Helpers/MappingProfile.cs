@@ -13,9 +13,10 @@ namespace API.Helpers
 
             CreateMap<Compania, CompaniaDto>().ReverseMap();
             CreateMap<Empleado, EmpleadoUpsertDto>().ReverseMap();
-
+            
+            // mapeo de nombre de compania en el empleado
             CreateMap<Empleado, EmpleadoReadDto>()
-                       .ForMember(e => e.CompaniaId, m => m.MapFrom(c => c.Compania.NombreCompania));
+                       .ForMember(e => e.CompaniaNom, m => m.MapFrom(c => c.Compania.NombreCompania));
 
 
 

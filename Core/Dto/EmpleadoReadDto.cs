@@ -9,7 +9,7 @@ namespace Core.Dto
     {
         public string Apellidos { get; set; }
         public string Nombres { get; set; }
-        public string  Cargo { get; set; }
-        public string CompaniaId { get; set; }
+        public string Cargo { get; set; }
+        public string CompaniaNom { get; set; } // nombre de mapeo ones para el nombre de la compañia
     }
 }
